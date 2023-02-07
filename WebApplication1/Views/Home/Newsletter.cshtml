@@ -1,0 +1,40 @@
+﻿<style>
+    h1 {
+        color:crimson;
+        font-weight: bold;
+        font-family: 'Gill Sans';
+        -webkit-text-stroke:thin;
+        -webkit-text-stroke-color:black;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-6">Zapisz się do newslettera!</h1>
+</div>
+
+@if (ViewData["Imie"] != "" || ViewData["Nazwisko"] != "" || ViewData["Email"] != "")
+{
+
+    <h1> Pomyślnie przesłano dane</h1>
+    <h4>@ViewData["Imie"]</h4>
+    <h4>@ViewData["Nazwisko"]</h4>
+    <h4>@ViewData["Email"]</h4>
+}
+else
+{
+    <div class="text-center">
+        
+    <form method="get" asp-area="" asp-controller="Home" asp-action="Newsletter">
+        <label for="Imie">Podaj Imie:</label>
+        <input type="text" name="Imie" />
+        
+        <label for="Nazwisko">Podaj Nazwisko:</label>
+        <input type="text" name="Nazwisko" />
+
+        <label for="Email">Podaj email:</label>
+        <input type="text" name="Email" />
+        <input type="submit" />
+    </form>
+    </div>
+}
+
