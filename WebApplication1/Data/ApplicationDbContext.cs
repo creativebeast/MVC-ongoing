@@ -10,8 +10,7 @@ namespace WebApplication1.Data
             : base(options)
         {
         }
-        public DbSet<WebApplication1.Models.Exercise> Exercise { get; set; }
-        public DbSet<WebApplication1.Models.Session> Session { get; set; }
-        public DbSet<WebApplication1.Models.SE> SE { get; set; }
+
+        
     }
 }

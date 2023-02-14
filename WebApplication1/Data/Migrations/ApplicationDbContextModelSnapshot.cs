@@ -238,7 +238,7 @@ namespace WebApplication1.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Exercise");
+                    b.ToTable("Exercise", (string)null);
                 });
 
             modelBuilder.Entity("WebApplication1.Models.SE", b =>
@@ -270,7 +270,7 @@ namespace WebApplication1.Data.Migrations
 
                     b.HasIndex("SessionId");
 
-                    b.ToTable("SE");
+                    b.ToTable("SE", (string)null);
                 });
 
             modelBuilder.Entity("WebApplication1.Models.Session", b =>
@@ -289,7 +289,7 @@ namespace WebApplication1.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Session");
+                    b.ToTable("Session", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
